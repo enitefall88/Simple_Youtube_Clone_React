@@ -3,17 +3,19 @@ import React from "react"
 class SearchBar extends React.Component {
 state = {search: ''}
 
+  onFormSubmit = (event) => {
+
+  }
 
   render() {
-    let onInput =() => {
-    this.setState(this.state.search)
-    }
+
     return <div>
       <form>
         <label>Search for videos here</label>
-        <input onInput={onInput}/>
+        <input onChange={e => this.setState({search: e.target.value})}/>
       </form>
-    </div>
+      {console.log(this.state)}
+     </div>
   }
 }
 
