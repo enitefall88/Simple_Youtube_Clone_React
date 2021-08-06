@@ -6,13 +6,14 @@ onChange = (event) => {
   this.setState({search: event.target.value})
 }
   onFormSubmit = (event) => {
-
+  event.preventDefault()
+  this.props.onSearchSubmit(this.state.search)
   }
 
   render() {
 
     return <div className="search-bar ui segment">
-      <form className="ui form">
+      <form onSubmit={this.onFormSubmit} className="ui form">
         <div className="field">
         <label>Search for videos here</label>
         <input type="text" onChange={this.onChange}/>
