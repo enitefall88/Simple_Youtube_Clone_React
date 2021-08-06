@@ -12,8 +12,9 @@ class App extends React.Component {
       }
     })
     this.setState({videos: response})
-    console.log(this.state)
+    console.log(response.data)
   }
+
 
   render() {
 
