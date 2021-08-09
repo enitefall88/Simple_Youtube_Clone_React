@@ -2,7 +2,8 @@ import React from "react"
 
 let VideoItem = ({video}) => {
  return <div>
-   {video.snippet.description}
+  <img src={video.snippet.thumbnails.default.url}/>
+  {video.snippet.title}
  </div>
 }
 
