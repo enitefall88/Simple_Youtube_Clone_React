@@ -12,7 +12,7 @@ class App extends React.Component {
         q: searchString
       }
     })
-  this.setState({videos: response.data.items})
+    this.setState({videos: response.data.items})
     //console.log(this.state)
   }
 
@@ -26,10 +26,19 @@ class App extends React.Component {
 
     return <div>
       <SearchBar onSearchSubmit={this.onSearchSubmit}/>
-      <VideoDetail video={this.state.selectedVideo}/>
-      <VideosList videos={this.state.videos}
-                  onVideoSelect={this.onVideoSelect}
-      />
+      <div className="ui grid">
+        <div className="ui row">
+        <div className="eleven wide column">
+          <VideoDetail video={this.state.selectedVideo}/>
+          </div>
+        <div className="five wide column">
+          <VideosList videos={this.state.videos}
+                    onVideoSelect={this.onVideoSelect}
+        />
+        </div>
+        </div>
+      </div>
+
     </div>
   }
 }
