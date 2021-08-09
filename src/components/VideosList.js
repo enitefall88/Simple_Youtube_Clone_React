@@ -1,22 +1,13 @@
 import React from "react"
+import VideoItem from "./VideoItem";
 
-/*
-class VideosList extends React.Component {
-
-  render() {
-    return null
-  }
-}
-*/
-
-
-let videosList = ({videosList}) => {
-  console.log(videosList)
+let videosList = ({videos}) => {
+  console.log(videos)
+   let renderedList = videos.map((video) => {
+     return <VideoItem video={video}/>
+   })
   return <div>
-    <ul>
-
-    </ul>
-
+    {renderedList}
   </div>
 }
 
