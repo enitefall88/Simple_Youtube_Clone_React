@@ -9,8 +9,7 @@ let VideoItem = ({video, onVideoSelect, selectedVideo}) => {
   <div className="content">
   <div className="header"> {video.snippet.title} </div>
    </div>
-   <VideoDetail video={video}/>
- </div>
+   </div>
 }
 
 export default VideoItem
