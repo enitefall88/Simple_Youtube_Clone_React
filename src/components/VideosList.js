@@ -10,9 +10,12 @@ class VideosList extends React.Component {
 */
 
 
-let videosList = (props) => {
-  console.log(props)
+let videosList = ({videosList}) => {
+  console.log(videosList)
   return <div>
+    <ul>
+
+    </ul>
 
   </div>
 }
